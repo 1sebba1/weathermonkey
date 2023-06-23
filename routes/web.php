@@ -23,11 +23,6 @@ Route::get('/dashboard', [WeatherController::class,'getWeather'])->middleware(['
 Route::post('/search', [WeatherController::class,'getWeather'])->middleware(['auth', 'verified'])->name('search');
 Route::get('/dashboard-error', [WeatherController::class,'getWeather'])->middleware(['auth', 'verified'])->name('dashboard-error');
 
-//Route::get('/dashboard', [WeatherController::class,'GetCurrentWeather'])->middleware(['auth', 'verified'])->name('dashboard');
-
-//Route::post('/search-city', [WeatherController::class, 'cityCurrentSearch'])->name('search.city');
-//Route::post('/dashboard', [WeatherController::class, 'cityForecastSearch']);
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
