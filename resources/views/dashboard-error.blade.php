@@ -6,7 +6,11 @@
     </head>
 	<body class="h-screen bg-gradient-to-b
 	from-white to-black">
-		
+    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+		@csrf
+		<button type="submit" class="text-white  absolute right-2.5 top-2.5 bg-red-500 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Logout</button>
+
+	</form>
 	<div class="w-full mt-16 lg:mt-64 lg:px-40 justify-center container mx-auto ">
 	
 		
